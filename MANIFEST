@@ -1,5 +1,6 @@
 benchmarks/arrayref.pl
 benchmarks/bool.pl
+benchmarks/inc2.pl
 benchmarks/sort_by.pl
 Changes
 inc/Module/Install.pm

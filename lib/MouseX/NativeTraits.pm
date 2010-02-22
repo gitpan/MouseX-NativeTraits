@@ -3,7 +3,7 @@ package MouseX::NativeTraits;
 use 5.006_002;
 use Mouse::Role;
 
-our $VERSION = '0.001_01';
+our $VERSION = '0.001_02';
 
 requires qw(method_provider_class helper_type);
 
@@ -71,8 +71,8 @@ around _canonicalize_handles => sub {
 };
 
 around _make_delegation_method => sub {
-    my( $next, $self, $handle_name, $method_to_call, @curried_args ) = @_;
-    return $self->method_provider->generate($handle_name, $method_to_call, @curried_args);
+    my( $next, $self, $handle_name, $method_to_call) = @_;
+    return $self->method_provider->generate($handle_name, $method_to_call);
 };
 
 no Mouse::Role;
@@ -86,7 +86,7 @@ MouseX::NativeTraits - Extend your attribute interfaces for Mouse
 
 =head1 VERSION
 
-This document describes MouseX::NativeTraits version 0.001_01.
+This document describes MouseX::NativeTraits version 0.001_02.
 
 =head1 SYNOPSIS
 
