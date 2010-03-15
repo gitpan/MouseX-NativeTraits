@@ -16,6 +16,7 @@ lib/Mouse/Meta/Attribute/Custom/Trait/Counter.pm
 lib/Mouse/Meta/Attribute/Custom/Trait/Hash.pm
 lib/Mouse/Meta/Attribute/Custom/Trait/Number.pm
 lib/Mouse/Meta/Attribute/Custom/Trait/String.pm
+lib/Mouse/Meta/Attribute/Native.pm
 lib/MouseX/NativeTraits.pm
 lib/MouseX/NativeTraits/ArrayRef.pm
 lib/MouseX/NativeTraits/Bool.pm
@@ -40,6 +41,7 @@ README
 t/00_load.t
 t/01_basic.t
 t/02_meta.t
+t/03_extra.t
 t/070_native_traits/010_array_from_role.t
 t/070_native_traits/100_collection_with_roles.t
 t/070_native_traits/201_trait_counter.t
