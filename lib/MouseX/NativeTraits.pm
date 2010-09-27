@@ -1,9 +1,8 @@
 package MouseX::NativeTraits;
-
 use 5.006_002;
 use Mouse::Role;
 
-our $VERSION = '0.002';
+our $VERSION = '1.00';
 
 requires qw(method_provider_class helper_type);
 
@@ -50,8 +49,8 @@ before _process_options => sub {
 };
 
 around _canonicalize_handles => sub {
-    my($next, $self, $handles_ref) = @_;
-
+    my($next, $self) = @_;
+    my $handles_ref = $self->handles;
     if( ref($handles_ref) ne 'HASH' ) {
         $self->throw_error(
             "The 'handles' option must be a HASH reference, not $handles_ref");
@@ -76,7 +75,6 @@ around _make_delegation_method => sub {
 };
 
 no Mouse::Role;
-
 1;
 __END__
 
@@ -86,7 +84,7 @@ MouseX::NativeTraits - Extend your attribute interfaces for Mouse
 
 =head1 VERSION
 
-This document describes MouseX::NativeTraits version 0.002.
+This document describes MouseX::NativeTraits version 1.00.
 
 =head1 SYNOPSIS
 
