@@ -19,6 +19,7 @@ module_name: MouseX::NativeTraits
 name: MouseX-NativeTraits
 no_index:
   directory:
+    - example
     - inc
     - t
     - xt
@@ -28,4 +29,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/gfx/p5-MouseX-NativeTraits.git
-version: 1.01
+version: 1.02

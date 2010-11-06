@@ -3,6 +3,7 @@ benchmarks/bool.pl
 benchmarks/inc2.pl
 benchmarks/sort_by.pl
 Changes
+example/complex_tc.pl
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Makefile.pm
