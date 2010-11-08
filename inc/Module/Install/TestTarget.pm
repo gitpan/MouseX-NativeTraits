@@ -3,7 +3,7 @@ package Module::Install::TestTarget;
 use 5.006_002;
 use strict;
 #use warnings; # XXX: warnings.pm produces a lot of 'redefine' warnings!
-our $VERSION = '0.12';
+our $VERSION = '0.13';
 
 use base qw(Module::Install::Base);
 use Config;
@@ -65,7 +65,8 @@ sub _build_command_parts {
     $test{load_modules}  = @{$args{load_modules}}  ? join '', map { qq|"-M$_" | } @{$args{load_modules}}  : '';
     $test{tests}    = @{$args{tests}}    ? join '', map { qq|"$_" |   } @{$args{tests}}    : '$(TEST_FILES)';
     for my $key (qw/run_on_prepare run_on_finalize/) {
-        $test{$key} = @{$args{$key}} ? join '', map { qq|do '$_'; | } @{$args{$key}} : '';
+        $test{$key} = @{$args{$key}} ? join '', map { qq|do { local \$@; do '$_'; die \$@ if \$@ }; | } @{$args{$key}} : '';
+        $test{$key} = _quote($test{$key});
     }
     for my $key (qw/insert_on_prepare insert_on_finalize/) {
         my $codes = join '', map { _build_funcall($_) } @{$args{$key}};
@@ -124,7 +125,7 @@ sub _assemble {
             $args{env},
             $args{run_on_prepare},
             $args{insert_on_prepare},
-            $2,
+            "$2; ",
             $args{run_on_finalize},
             $args{insert_on_finalize},
             $3,
@@ -143,4 +144,4 @@ sub _test_via_harness {
 1;
 __END__
 
-#line 374
+#line 375
