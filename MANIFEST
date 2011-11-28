@@ -1,5 +1,6 @@
 benchmarks/arrayref.pl
 benchmarks/bool.pl
+benchmarks/inc.pl
 benchmarks/inc2.pl
 benchmarks/sort_by.pl
 Changes
@@ -44,6 +45,7 @@ t/00_load.t
 t/01_basic.t
 t/02_meta.t
 t/03_extra.t
+t/04_counter.t
 t/070_native_traits/010_trait_array.t
 t/070_native_traits/011_array_subtypes.t
 t/070_native_traits/012_array_trigger.t
