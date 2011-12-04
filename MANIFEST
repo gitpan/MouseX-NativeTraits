@@ -47,6 +47,7 @@ t/01_basic.t
 t/02_meta.t
 t/03_extra.t
 t/04_counter.t
+t/05_remain_tied.t
 t/070_native_traits/010_trait_array.t
 t/070_native_traits/011_array_subtypes.t
 t/070_native_traits/012_array_trigger.t
@@ -66,5 +67,4 @@ t/070_native_traits/102_collection_with_roles.t
 t/070_native_traits/103_custom_instance.t
 xt/01_podspell.t
 xt/02_pod.t
-xt/03_pod-coverage.t
 xt/04_synopsis.t
