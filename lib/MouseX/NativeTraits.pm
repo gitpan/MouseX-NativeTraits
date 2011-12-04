@@ -2,7 +2,7 @@ package MouseX::NativeTraits;
 use 5.006_002;
 use Mouse::Role;
 
-our $VERSION = '1.05';
+our $VERSION = '1.06';
 
 requires qw(method_provider_class helper_type);
 
@@ -84,7 +84,7 @@ MouseX::NativeTraits - Extend your attribute interfaces for Mouse
 
 =head1 VERSION
 
-This document describes MouseX::NativeTraits version 1.05.
+This document describes MouseX::NativeTraits version 1.06.
 
 =head1 SYNOPSIS
 
@@ -115,7 +115,7 @@ As seen in the L</SYNOPSIS>, you specify the data structure via the
 C<traits> parameter. These traits will be loaded automatically, so
 you need not load MouseX::NativeTraits explicitly.
 
-This extention is compatible with Moose native traits, although it
+This extension is compatible with Moose native traits, although it
 is not a part of Mouse core.
 
 =head1 PARAMETERS

@@ -6,6 +6,7 @@ benchmarks/sort_by.pl
 Changes
 example/complex_tc.pl
 inc/Module/Install.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
